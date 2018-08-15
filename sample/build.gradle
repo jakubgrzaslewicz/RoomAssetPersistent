@@ -16,8 +16,8 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "jakubgrzaslewicz.pl.androidroomasset"
-        minSdkVersion 15
+        applicationId "jakubgrzaslewicz.pl.roomassetpersistent"
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -33,11 +33,15 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug{
+            minifyEnabled false
+            debuggable true
+        }
     }
 }
 
 dependencies {
-    implementation project(':roomassetreadonly')
+    implementation project(':roomassetpersistent')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'

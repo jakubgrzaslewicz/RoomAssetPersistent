@@ -5,13 +5,13 @@
  *
  */
 
-package jakubgrzaslewicz.pl.androidroomasset
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
-import jakubgrzaslewicz.pl.androidroomasset.DAOs.TestDao
-import jakubgrzaslewicz.pl.androidroomasset.Entities.Test
+import jakubgrzaslewicz.pl.roomassetpersistent.DAOs.TestDao
+import jakubgrzaslewicz.pl.roomassetpersistent.Entities.Test
 import jakubgrzaslewicz.pl.roomassetreadonly.RoomAssetRO
 
 const val VERSION = 7
@@ -23,7 +23,7 @@ const val VERSION = 7
         ],
         exportSchema = true
 )
-public abstract class MainDatabase : RoomDatabase() {
+abstract class MainDatabase : RoomDatabase() {
     abstract fun Test(): TestDao
 
     companion object {

@@ -1,8 +1,8 @@
-package jakubgrzaslewicz.pl.androidroomasset
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun InitializeDatabase() {
         MainDatabase.getInstance(this@MainActivity).Test().getAll().forEach{
-            Log.d("DatabaseReader", it.Value)
+            textView.text = it.Value
         }
     }
 }
