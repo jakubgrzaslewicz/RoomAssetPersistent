@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.roomassetpersistent
+package jakubgrzaslewicz.pl.roomassetpersistentsample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

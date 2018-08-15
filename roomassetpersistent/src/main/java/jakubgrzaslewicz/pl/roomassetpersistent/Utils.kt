@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.roomassetreadonly
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 
 import android.util.Log

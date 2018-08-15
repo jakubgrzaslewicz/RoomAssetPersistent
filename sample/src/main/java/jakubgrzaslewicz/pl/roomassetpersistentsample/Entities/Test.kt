@@ -5,7 +5,7 @@
  *
  */
 
-package jakubgrzaslewicz.pl.roomassetpersistent.Entities
+package jakubgrzaslewicz.pl.roomassetpersistentsample.Entities
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity

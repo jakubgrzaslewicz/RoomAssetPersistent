@@ -17,7 +17,7 @@ android {
     buildToolsVersion "27.0.3"
     compileSdkVersion 27
     defaultConfig {
-        applicationId "jakubgrzaslewicz.pl.roomassetpersistent"
+        applicationId "jakubgrzaslewicz.pl.roomassetpersistentsample"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1

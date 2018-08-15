@@ -5,7 +5,7 @@
  *
  */
 
-package jakubgrzaslewicz.pl.roomassetreadonly
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 
 import android.content.Context
@@ -366,8 +366,7 @@ class RoomAssetPersistent
                 input.add(mContext.assets.open("$path.zip"))
                 isZip = true
             } catch (e2: IOException) {
-                val se = SQLiteAssetException("Missing $mAssetPath file (or .zip) in assets, or target folder not writable")
-                se.stackTrace = e2.stackTrace
+                val se = SQLiteAssetException("Missing $mAssetPath file (or .zip) in assets, or target folder not writable", e2 as Throwable)
                 throw se
             }
 
@@ -407,19 +406,15 @@ class RoomAssetPersistent
     /**
      * An exception that indicates there was an error with SQLite asset retrieval or parsing.
      */
-    class SQLiteAssetException : SQLiteException {
-
-        constructor() {}
-
-        constructor(error: String) : super(error) {}
-        constructor(error: String, cause: Throwable) : super(error) {
+    class SQLiteAssetException(error: String, cause: Throwable) : SQLiteException(error) {
+        init {
             this.stackTrace = cause.stackTrace
         }
     }
 
     companion object {
 
-        public val TAG = RoomAssetPersistent::class.java.simpleName
+        val TAG = RoomAssetPersistent::class.java.simpleName
         private val ASSET_DB_PATH = "databases"
     }
 

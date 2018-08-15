@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.roomassetreadonly
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
