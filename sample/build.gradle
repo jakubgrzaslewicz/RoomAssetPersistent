@@ -12,7 +12,16 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven'
 
+group = 'pl.jakubgrzaslewicz'
+version = '1.0'
+
+uploadArchives {
+    repositories {
+        mavenLocal()
+    }
+}
 android {
     buildToolsVersion "27.0.3"
     compileSdkVersion 27

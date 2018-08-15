@@ -6,3 +6,13 @@
 /captures
 .externalNativeBuild
 /.idea
+roomassetpersistent/bintray.properties
+roomassetpersistent/libs/
+roomassetpersistent/src/androidTest/
+roomassetpersistent/src/main/res/drawable/
+roomassetpersistent/src/test/
+sample/libs/
+sample/src/androidTest/
+sample/src/test/
+schemas/
+bintray.properties
