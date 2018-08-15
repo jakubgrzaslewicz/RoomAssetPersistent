@@ -37,7 +37,7 @@ Library will take over of extracting and replacing process.
 License
 -------
 
-Copyright 2018 The Android Open Source Project, Inc.
+Copyright 2018 Jakub Grząślewicz
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
