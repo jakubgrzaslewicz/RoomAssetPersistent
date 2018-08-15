@@ -8,7 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/roomassetreadonly" />
+            <option value="$PROJECT_DIR$/roomassetpersistent" />
             <option value="$PROJECT_DIR$/sample" />
           </set>
         </option>
