@@ -11,6 +11,12 @@ This library is not using versioning in Room library. Version is saved in `.ver`
 Your first call to database should be asynchronous so in case of update process it won't lock your UI thread.  
 Usually for 2 MB zip file it takes about 1 second to extract and open connection to database.
 
+## Configure project
+Add this line to build.gradle:
+  ```gradle
+  implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.1'
+  ```
+
 ## Set up
 1. Create new directory in your project: `assets/databases`
 1. Determine the name of your database (it must be consistent along the setup process)
