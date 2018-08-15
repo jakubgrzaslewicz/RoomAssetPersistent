@@ -23,3 +23,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
+before_install:
+ - chmod +x gradlew
+script:
+ - chmod +x ./gradlew assembleRelease
