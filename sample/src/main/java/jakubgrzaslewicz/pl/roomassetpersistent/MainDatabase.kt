@@ -12,12 +12,10 @@ import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 import jakubgrzaslewicz.pl.roomassetpersistent.DAOs.TestDao
 import jakubgrzaslewicz.pl.roomassetpersistent.Entities.Test
-import jakubgrzaslewicz.pl.roomassetreadonly.RoomAssetRO
-
-const val VERSION = 7
+import jakubgrzaslewicz.pl.roomassetreadonly.RoomAsset
 
 @Database(
-        version = VERSION,
+        version = 1,
         entities = [
             Test::class
         ],
@@ -36,7 +34,7 @@ abstract class MainDatabase : RoomDatabase() {
                 }
 
         private fun buildDatabase(context: Context) =
-                RoomAssetRO.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite")
+                RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite")
                         .allowMainThreadQueries()
                         .build()
     }
