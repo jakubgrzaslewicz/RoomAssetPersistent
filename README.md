@@ -4,15 +4,16 @@
 This library allows to use Android Room Persistence library with always up to date database. 
 Database file will be replaced with new one from assets directory of the app if version of extracted database is not equal to this included to app.
 
-Basically this library is meant to use with sqlite database that contains data that user should only read(eg. color recipes for formulation in app). Of course database is writeable but everything will be remoed after every database update.
+Basically this library is meant to use with sqlite database that contains data that user should only read(eg. color recipes for formulation). Of course database is writeable but everything will be overwritten after every database update.
 
-This library is not using versioning in Room library. Version is saved in `.ver` file that is saved along with the database file.
+This library is not using versioning of Room library. Version is saved in `.ver` file that is saved along with the database file.  
+Your version for room database in @Database annotation must always be 1.  
 
 Your first call to database should be asynchronous so in case of update process it won't lock your UI thread.  
-Usually for 2 MB zip file it takes about 1 second to extract and open connection to database.
+Usually for 2 MB zip file it takes about 1 second to extract and open connection to database.  
 
 ## Configure project
-Add this line to build.gradle:
+Add this line to module level build.gradle:
   ```gradle
   implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.1'
   ```
@@ -32,7 +33,7 @@ Add this line to build.gradle:
   ```kotlin
   RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite").build()
   ```
-  Remember to call builder only in singleton class (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/roomassetpersistent/MainDatabase.kt))  
+  Remember to call builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/roomassetpersistentsample/MainDatabase.kt))  
   Third parameter of databaseBuilder function should be name of your database.  
   Database will be extracted alongside with `.ver` file to databases directory in internal storage of device.
 
