@@ -16,7 +16,6 @@ public class RoomAssetRO {
                 context: Context,
                 dbClass: Class<T>,
                 dbName: String,
-                version: Int,
                 storageLocation: String? = null,
                 factory: SQLiteDatabase.CursorFactory? = null
         ): RoomDatabase.Builder<T> {

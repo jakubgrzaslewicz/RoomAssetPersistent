@@ -36,7 +36,7 @@ abstract class MainDatabase : RoomDatabase() {
                 }
 
         private fun buildDatabase(context: Context) =
-                RoomAssetRO.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite", VERSION)
+                RoomAssetRO.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite")
                         .allowMainThreadQueries()
                         .build()
     }
