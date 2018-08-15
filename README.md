@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent.svg?branch=master)](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent)
+
 # RoomAssetPersistent
 This library allows to use Android Room Persistence library with always up to date database. 
 Database file will be replaced with new one from assets directory of the app if version of extracted database is not equal to this included to app.
