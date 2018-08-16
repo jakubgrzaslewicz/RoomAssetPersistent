@@ -2,14 +2,16 @@ tasks.withType(Javadoc) {
     excludes = ['**/*.kt']
 }
 ext {
-    bintrayRepo = 'RoomAssetPersistent'
+    bintrayApiKey = 'XXX'
+
+    bintrayRepo = 'android'
     bintrayName = 'RoomAssetPersistent'
 
     publishedGroupId = 'pl.jakubgrzaslewicz'
     libraryName = 'RoomAssetPersistent'
-    artifact = 'RoomAssetPersistentLibrary'
+    artifact = 'RoomAssetPersistent'
 
-    libraryDescription = 'A library for using Android Room Persistence Library with persistent database file included in assets'
+    libraryDescription = 'A library for using the Android Room Persistence Library with the persistent database file included in the assets'
 
     siteUrl = 'https://github.com/jakubgrzaslewicz/RoomAssetPersistent'
     gitUrl = 'https://github.com/jakubgrzaslewicz/RoomAssetPersistent.git'
@@ -82,8 +84,8 @@ artifacts {
 }
 
 bintray {
-    user = 'jakubgrzaslewicz'
-    key = 'xxx'
+    user = developerId
+    key = bintrayApiKey
 
     configurations = ['archives']
     pkg {
