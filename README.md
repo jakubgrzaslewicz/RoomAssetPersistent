@@ -17,6 +17,16 @@ Add this line to module level build.gradle:
 ```gradle
 implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.1'
 ```
+Make sure that you have added the jcenter repository to project level build.gradle:
+```gradle
+allprojects {
+    repositories {
+        ...
+        jcenter()
+        ...
+    }
+}
+```
 
 ## Set up
 1. Create a new directory in your project: `assets/databases`
