@@ -1,30 +1,30 @@
 [![Build Status](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent.svg?branch=master)](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent)
 
 # RoomAssetPersistent
-This library allows to use Android Room Persistence library with always up to date database. 
-Database file will be replaced with new one from assets directory of the app if version of extracted database is not equal to this included to app.
+This library enables you to use the Android Room Persistence library with an always up-to-date database.
+Database file will be replaced with a new one from the assets directory of the app if the version of extracted database is not equal to the one included in app.
 
-Basically this library is meant to use with sqlite database that contains data that user should only read(eg. color recipes for formulation). Of course database is writeable but everything will be overwritten after every database update.
+Basically this library is meant to be used with sqlite database that contains data the user should only be able to read(eg. color recipes for formulation). Of course database is writable but everything will be overwritten after every database update.
 
-This library is not using versioning of Room library. Version is saved in `.ver` file that is saved along with the database file.  
-Your version for room database in @Database annotation must always be 1.  
+This library is not using Room library's versioning system. The version is saved in a `.ver` file that is saved along with the database.
+Your version of the Room database in @Database annotation must always be 1.
 
-Your first call to database should be asynchronous so in case of update process it won't lock your UI thread.  
-Usually for 2 MB zip file it takes about 1 second to extract and open connection to database.  
+Your first call to the database should be asynchronous so in case of update process it won't lock your UI thread.
+Usually for a 2 MB zip file it takes around 1 second to extract and open connection to database.
 
 ## Configure project
 Add this line to module level build.gradle:
-  ```gradle
-  implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.1'
-  ```
+```gradle
+implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.1'
+```
 
 ## Set up
-1. Create new directory in your project: `assets/databases`
-1. Determine the name of your database (it must be consistent along the setup process)
-1. Create database file (eg. `MainDatabase.sqlite`)
-1. Create version file with name of your database and `.ver` extension (eg. `MainDatabase.sqlite.ver`)
-1. Create `.zip` package that contains both of the files created previously and name it with your database name with extension `.zip` (eg. `MainDatabase.sqlite.zip`). You can select any compression level.
-1. Set up your database using this guide: [Android -Persistence Guide](https://developer.android.com/training/data-storage/room/)
+1. Create a new directory in your project: `assets/databases`
+1. Determine the name of your database (it must be consistent along with the setup process)
+1. Create a database file (eg. `MainDatabase.sqlite`)
+1. Create a version file with the name of your database and `.ver` extension (eg. `MainDatabase.sqlite.ver`)
+1. Create a `.zip` package that contains both  the previously created files and name it with your database name with extension `.zip` (eg. `MainDatabase.sqlite.zip`). You can select any compression level.
+1. Set up your database using this guide: [Android - Persistence Guide](https://developer.android.com/training/data-storage/room/)
 1. Instead of using Room's database builder:
   ```kotlin
   Room.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase").build()
@@ -33,13 +33,13 @@ Add this line to module level build.gradle:
   ```kotlin
   RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite").build()
   ```
-  Remember to call builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/roomassetpersistentsample/MainDatabase.kt))  
-  Third parameter of databaseBuilder function should be name of your database.  
-  Database will be extracted alongside with `.ver` file to databases directory in internal storage of device.
+  Remember to call the builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/roomassetpersistentsample/MainDatabase.kt))
+  Third parameter of the databaseBuilder function should be the name of your database.
+  Database will be extracted alongside with the `.ver` file to databases directory in the internal storage of device.
 
 ## Database update
-1. To update database file extracted to user's device just change content of `.ver` file in zip package located in `assets/databases` to whatever you want (I suggest to use just a number and increment it for every new version)
-Library will take over of extracting and replacing process. 
+1. To update the database file extracted to user's device just change the content of the `.ver` file in a zip package located in `assets/databases` to whatever you want (I suggest using just a number and incrementing it for every new version)
+The library will take over the extracting and replacing process.
 
 
 License
