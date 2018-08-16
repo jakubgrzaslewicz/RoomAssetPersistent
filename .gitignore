@@ -1,7 +1,7 @@
 *.iml
 .gradle
 /build
-/.idea
+/.idea/*
 roomassetpersistent/libs/
 roomassetpersistent/src/androidTest/
 roomassetpersistent/src/main/res/drawable/
