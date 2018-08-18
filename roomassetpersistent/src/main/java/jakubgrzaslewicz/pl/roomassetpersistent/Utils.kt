@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.roomassetpersistent
+package jakubgrzaslewicz.pl.RoomAssetPersistent
 
 
 import android.util.Log

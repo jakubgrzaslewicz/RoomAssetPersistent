@@ -5,7 +5,7 @@
  *
  */
 
-package jakubgrzaslewicz.pl.roomassetpersistent
+package jakubgrzaslewicz.pl.RoomAssetPersistent
 
 
 import android.content.Context

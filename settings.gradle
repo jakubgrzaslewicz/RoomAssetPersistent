@@ -1,1 +1,1 @@
-include ':sample', ':roomassetpersistent'
+include ':sample', ':RoomAssetPersistent'

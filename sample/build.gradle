@@ -26,7 +26,7 @@ android {
     buildToolsVersion "27.0.3"
     compileSdkVersion 27
     defaultConfig {
-        applicationId "jakubgrzaslewicz.pl.roomassetpersistentsample"
+        applicationId "jakubgrzaslewicz.pl.RoomAssetPersistentsample"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
@@ -51,7 +51,7 @@ android {
 }
 
 dependencies {
-    implementation project(':roomassetpersistent')
+    implementation project(':RoomAssetPersistent')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'

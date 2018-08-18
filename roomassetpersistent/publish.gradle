@@ -16,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/jakubgrzaslewicz/RoomAssetPersistent'
     gitUrl = 'https://github.com/jakubgrzaslewicz/RoomAssetPersistent.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.2'
 
     developerId = 'jakubgrzaslewicz'
     developerName = 'Jakub Grząślewicz'
