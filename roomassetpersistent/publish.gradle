@@ -104,3 +104,10 @@ bintray {
         }
     }
 }
+task publishToBintray {
+    dependsOn 'clean'
+    dependsOn 'install'
+    dependsOn 'bintrayUpload'
+    tasks.findByName('install').mustRunAfter 'clean'
+    tasks.findByName('bintrayUpload').mustRunAfter 'install'
+}
