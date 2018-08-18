@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.RoomAssetPersistentsample
+package jakubgrzaslewicz.pl.RoomAssetPersistentSample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun InitializeDatabase() {
-        MainDatabase.getInstance(this@MainActivity).Test().getAll().forEach{
-            textView.text = it.Value
+        MainDatabase.getInstance(this@MainActivity).Test().getAll().first().takeIf { it.Value != null }.apply {
+            textView.text = this!!.Value
         }
+
     }
 }
