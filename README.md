@@ -15,7 +15,7 @@ Usually for a 2 MB zip file it takes around 1 second to extract and open connect
 ## Configure project
 Add this line to module level build.gradle:
 ```gradle
-implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.1'
+implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.2'
 ```
 Make sure that you have added the jcenter repository to project level build.gradle:
 ```gradle
@@ -37,11 +37,11 @@ allprojects {
 1. Set up your database using this guide: [Android - Persistence Guide](https://developer.android.com/training/data-storage/room/)
 1. Instead of using Room's database builder:
   ```kotlin
-  Room.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase").build()
+  Room.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase").build()  
   ```
   use this syntax:
   ```kotlin
-  RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite").build()
+  RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite").build()  
   ```
   Remember to call the builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/RoomAssetPersistentsample/MainDatabase.kt))
   Third parameter of the databaseBuilder function should be the name of your database.
