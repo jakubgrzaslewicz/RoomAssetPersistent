@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent.svg?branch=master)](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent) 
 [![Download](https://api.bintray.com/packages/jakubgrzaslewicz/android/RoomAssetPersistent/images/download.svg)](https://bintray.com/jakubgrzaslewicz/android/RoomAssetPersistent/_latestVersion) 
 
 # RoomAssetPersistent
