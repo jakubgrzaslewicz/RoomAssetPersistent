@@ -44,7 +44,7 @@ allprojects {
   ```kotlin
   RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite").build()  
   ```
-  Remember to call the builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/RoomAssetPersistentsample/MainDatabase.kt))
+  Remember to call the builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/RoomAssetPersistentSample/MainDatabase.kt))
   Third parameter of the databaseBuilder function should be the name of your database.
   Database will be extracted alongside with the `.ver` file to databases directory in the internal storage of device.
 
