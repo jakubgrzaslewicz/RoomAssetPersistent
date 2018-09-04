@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/jakubgrzaslewicz/roomassetpersistent.svg?branch=master)](https://travis-ci.org/jakubgrzaslewicz/roomassetpersistent)
+[![Build Status](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent.svg?branch=master)](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent) 
+[![Download](https://api.bintray.com/packages/jakubgrzaslewicz/android/roomassetpersistent/images/download.svg) ](https://bintray.com/jakubgrzaslewicz/android/roomassetpersistent/_latestVersion) 
 
-# roomassetpersistent
+# RoomAssetPersistent
 This library enables you to use the Android Room Persistence library with an always up-to-date database.
 Database file will be replaced with a new one from the assets directory of the app if the version of extracted database is not equal to the one included in app.
 
@@ -15,7 +16,7 @@ Usually for a 2 MB zip file it takes around 1 second to extract and open connect
 ## Configure project
 Add this line to module level build.gradle:
 ```gradle
-implementation 'pl.jakubgrzaslewicz:roomassetpersistentLibrary:0.0.2'
+implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.2'
 ```
 Make sure that you have added the jcenter repository to project level build.gradle:
 ```gradle
@@ -43,7 +44,7 @@ allprojects {
   ```kotlin
   RoomAsset.databaseBuilder(context.applicationContext, MainDatabase::class.java, "MainDatabase.sqlite").build()  
   ```
-  Remember to call the builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/roomassetpersistentsample/MainDatabase.kt))
+  Remember to call the builder only once using singleton (example in [sample project](sample/src/main/java/jakubgrzaslewicz/pl/RoomAssetPersistentSample/MainDatabase.kt))
   Third parameter of the databaseBuilder function should be the name of your database.
   Database will be extracted alongside with the `.ver` file to databases directory in the internal storage of device.
 
