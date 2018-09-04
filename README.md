@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent.svg?branch=master)](https://travis-ci.org/jakubgrzaslewicz/RoomAssetPersistent) 
-[![Download](https://api.bintray.com/packages/jakubgrzaslewicz/android/RoomAssetPersistent/images/download.svg)](https://bintray.com/jakubgrzaslewicz/android/RoomAssetPersistent/_latestVersion) 
+[![Download](https://api.bintray.com/packages/jakubgrzaslewicz/android/RoomAssetPersistent/images/download.svg)](https://bintray.com/jakubgrzaslewicz/android/roomassetpersistent/_latestVersion) 
 
 # RoomAssetPersistent
 This library enables you to use the Android Room Persistence library with an always up-to-date database.
