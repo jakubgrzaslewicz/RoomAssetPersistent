@@ -5,18 +5,18 @@ ext {
     bintrayApiKey = 'XXX'
 
     bintrayRepo = 'android'
-    bintrayName = 'RoomAssetPersistent'
+    bintrayName = 'roomassetpersistent'
 
-    publishedGroupId = 'pl.jakubgrzaslewicz'
-    libraryName = 'RoomAssetPersistent'
-    artifact = 'RoomAssetPersistent'
+    publishedGroupId = 'pl.jakubgrzaslewicz.android'
+    libraryName = 'roomassetpersistent'
+    artifact = 'roomassetpersistent'
 
     libraryDescription = 'A library for using the Android Room Persistence Library with the persistent database file included in the assets'
 
-    siteUrl = 'https://github.com/jakubgrzaslewicz/RoomAssetPersistent'
-    gitUrl = 'https://github.com/jakubgrzaslewicz/RoomAssetPersistent.git'
+    siteUrl = 'https://github.com/jakubgrzaslewicz/roomassetpersistent'
+    gitUrl = 'https://github.com/jakubgrzaslewicz/roomassetpersistent.git'
 
-    libraryVersion = '0.0.2'
+    libraryVersion = '0.0.6'
 
     developerId = 'jakubgrzaslewicz'
     developerName = 'Jakub Grząślewicz'

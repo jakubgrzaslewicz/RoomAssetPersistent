@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.RoomAssetPersistent
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 
 import android.util.Log
@@ -12,7 +12,7 @@ import java.util.zip.ZipInputStream
 
 internal object Utils {
 
-    private val TAG = RoomAssetPersistent.TAG
+    private val TAG = roomassetpersistent.TAG
 
     @Throws(IOException::class)
     fun writeExtractedFileToDisk(`in`: InputStream, outs: OutputStream) {

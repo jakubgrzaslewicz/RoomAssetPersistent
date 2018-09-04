@@ -5,7 +5,7 @@
  *
  */
 
-package jakubgrzaslewicz.pl.RoomAssetPersistent
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 
 import android.content.Context
@@ -46,7 +46,7 @@ import java.util.zip.ZipInputStream
  * your app which uses a lower version number than a
  * previously-installed version will result in undefined behavior.
  */
-class RoomAssetPersistent
+class roomassetpersistent
 /**
  * Create a helper object to create, open, and/or manage a database in
  * a specified location.
@@ -414,7 +414,7 @@ class RoomAssetPersistent
 
     companion object {
 
-        val TAG = RoomAssetPersistent::class.java.simpleName
+        val TAG = roomassetpersistent::class.java.simpleName
         private val ASSET_DB_PATH = "databases"
     }
 

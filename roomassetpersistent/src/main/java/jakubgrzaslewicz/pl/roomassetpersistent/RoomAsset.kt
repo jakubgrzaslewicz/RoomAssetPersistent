@@ -1,4 +1,4 @@
-package jakubgrzaslewicz.pl.RoomAssetPersistent
+package jakubgrzaslewicz.pl.roomassetpersistent
 
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
@@ -25,7 +25,7 @@ public class RoomAsset {
         }
 
         private fun <T> initializeDatabase(context: Context, dbClass: Class<T>, dbName: String, storageLocation: String?, factory: SQLiteDatabase.CursorFactory?) {
-            RoomAssetPersistent(context, dbName, storageLocation, factory).writableDatabase.close()
+            roomassetpersistent(context, dbName, storageLocation, factory).writableDatabase.close()
             Log.w(TAG, "RoomAsset is ready ")
         }
     }

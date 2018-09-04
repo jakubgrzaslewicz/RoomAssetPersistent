@@ -5,11 +5,11 @@
  *
  */
 
-package jakubgrzaslewicz.pl.RoomAssetPersistentSample.DAOs
+package jakubgrzaslewicz.pl.roomassetpersistentSample.DAOs
 
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Query
-import jakubgrzaslewicz.pl.RoomAssetPersistentSample.Entities.Test
+import jakubgrzaslewicz.pl.roomassetpersistentSample.Entities.Test
 
 @Dao
 public interface TestDao {

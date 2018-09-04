@@ -5,14 +5,14 @@
  *
  */
 
-package jakubgrzaslewicz.pl.RoomAssetPersistentSample
+package jakubgrzaslewicz.pl.roomassetpersistentSample
 
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
-import jakubgrzaslewicz.pl.RoomAssetPersistentSample.DAOs.TestDao
-import jakubgrzaslewicz.pl.RoomAssetPersistentSample.Entities.Test
-import jakubgrzaslewicz.pl.RoomAssetPersistent.RoomAsset
+import jakubgrzaslewicz.pl.roomassetpersistentSample.DAOs.TestDao
+import jakubgrzaslewicz.pl.roomassetpersistentSample.Entities.Test
+import jakubgrzaslewicz.pl.roomassetpersistent.RoomAsset
 
 @Database(
         version = 1,
