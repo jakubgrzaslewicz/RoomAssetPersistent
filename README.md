@@ -16,7 +16,7 @@ Usually for a 2 MB zip file it takes around 1 second to extract and open connect
 ## Configure project
 Add this line to module level build.gradle:
 ```gradle
-implementation 'pl.jakubgrzaslewicz:RoomAssetPersistentLibrary:0.0.2'
+implementation 'pl.jakubgrzaslewicz.android:roomassetpersistent:0.0.6'
 ```
 Make sure that you have added the jcenter repository to project level build.gradle:
 ```gradle
